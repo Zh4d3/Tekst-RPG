@@ -13,3 +13,18 @@ C:\Users\Nexus borger\source\repos\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\refint\T
 C:\Users\Nexus borger\source\repos\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.pdb
 C:\Users\Nexus borger\source\repos\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.genruntimeconfig.cache
 C:\Users\Nexus borger\source\repos\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\ref\Tekst-RPG.dll
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\bin\Debug\net6.0\Tekst-RPG.exe
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\bin\Debug\net6.0\Tekst-RPG.deps.json
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\bin\Debug\net6.0\Tekst-RPG.runtimeconfig.json
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\bin\Debug\net6.0\Tekst-RPG.dll
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\bin\Debug\net6.0\Tekst-RPG.pdb
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.csproj.AssemblyReference.cache
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.AssemblyInfoInputs.cache
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.AssemblyInfo.cs
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.csproj.CoreCompileInputs.cache
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.dll
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\refint\Tekst-RPG.dll
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.pdb
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\Tekst-RPG.genruntimeconfig.cache
+C:\Users\rauns\source\repos\Tekst-RPG\Tekst-RPG\Tekst-RPG\obj\Debug\net6.0\ref\Tekst-RPG.dll
