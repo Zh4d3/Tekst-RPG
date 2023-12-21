@@ -36,6 +36,7 @@ namespace Tekst_RPG {
 
             static void MainMenuScreen() 
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("" +
                 "\n                                                                                    HACKMASTER\n\n" +
                 "\n                                                                                     `-:/+/:-`" +
@@ -111,7 +112,7 @@ namespace Tekst_RPG {
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("███╗   ███╗██╗ ██████╗ \r\n████╗ ████║██║██╔════╝ \r\n██╔████╔██║██║███████╗ \r\n██║╚██╔╝██║██║██╔═══██╗\r\n██║ ╚═╝ ██║██║╚██████╔╝\r\n╚═╝     ╚═╝╚═╝ ╚═════╝ \r\n                       ");
+                Console.WriteLine("\n   ███╗   ███╗██╗ ██████╗ \r\n   ████╗ ████║██║██╔════╝ \r\n   ██╔████╔██║██║███████╗ \r\n   ██║╚██╔╝██║██║██╔═══██╗\r\n   ██║ ╚═╝ ██║██║╚██████╔╝\r\n   ╚═╝     ╚═╝╚═╝ ╚═════╝ \r\n                          ");
                 Console.ForegroundColor = ConsoleColor.Green;
 
                 /*if (isUnlocked = true) 
@@ -152,7 +153,8 @@ namespace Tekst_RPG {
                 string chosenTerroistMission = chosenterroistMission.ToLower();
                 if (chosenTerroistMission == "disarm") 
                 {
-                    //Disarm();
+                    DissarmGame dissarmGame = new DissarmGame();
+                    dissarmGame.Play();
                 } else if (chosenTerroistMission == "dice")
                 {
                     //Dice();
@@ -174,7 +176,7 @@ namespace Tekst_RPG {
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("████████╗███████╗██████╗ ██████╗  ██████╗ ██╗███████╗████████╗\r\n╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗██║██╔════╝╚══██╔══╝\r\n   ██║   █████╗  ██████╔╝██████╔╝██║   ██║██║███████╗   ██║   \r\n   ██║   ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██║╚════██║   ██║   \r\n   ██║   ███████╗██║  ██║██║  ██║╚██████╔╝██║███████║   ██║   \r\n   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   \r\n                                                              ");
+                Console.WriteLine("\n   ████████╗███████╗██████╗ ██████╗  ██████╗ ██╗███████╗████████╗\r\n   ╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗██║██╔════╝╚══██╔══╝\r\n      ██║   █████╗  ██████╔╝██████╔╝██║   ██║██║███████╗   ██║   \r\n      ██║   ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██║╚════██║   ██║   \r\n      ██║   ███████╗██║  ██║██║  ██║╚██████╔╝██║███████║   ██║   \r\n      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   \r\n                                                                 ");
                 Console.ForegroundColor = ConsoleColor.Green;
 
                 /*if (isUnlocked = true) 
@@ -232,8 +234,6 @@ namespace Tekst_RPG {
                     TerroistMissions();
                 }
             }
-
         }
-
     }
 }

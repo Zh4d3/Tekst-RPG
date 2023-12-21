@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Alt dette er kopieret herfra: https://www.youtube.com/watch?v=eWceJNkxbdU&ab_channel=CollegeCode
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
