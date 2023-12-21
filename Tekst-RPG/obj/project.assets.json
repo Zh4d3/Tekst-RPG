@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rauns\\.nuget\\packages\\": {}
+    "C:\\Users\\Christian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
+      "projectUniqueName": "C:\\Users\\Christian\\source\\repos\\Brance game\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
       "projectName": "Tekst-RPG",
-      "projectPath": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
-      "packagesPath": "C:\\Users\\rauns\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\obj\\",
+      "projectPath": "C:\\Users\\Christian\\source\\repos\\Brance game\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
+      "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christian\\source\\repos\\Brance game\\Tekst-RPG\\Tekst-RPG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rauns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
