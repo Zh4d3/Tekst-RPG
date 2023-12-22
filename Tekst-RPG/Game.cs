@@ -4,19 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tekst_RPG {
-    internal class Game {
-
-        public void Play() 
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Start();
-
-            static void Start() 
+namespace Tekst_RPG 
+{
+    internal class Game 
+    {
+            public void Start() 
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("Go to fullscreen and type \"Start\" to continue: ");
-                string inputstart = Console.ReadLine();
-                string inputStart = inputstart.ToLower();
+                string inputStart = Console.ReadLine().ToLower();
                 if (inputStart == "start") {
                     Console.Clear();
                     /*MatrixRain matrixRain = new MatrixRain();          //BENYT HVIS VI BRUGER MatrixRain.
@@ -29,7 +25,6 @@ namespace Tekst_RPG {
                 } else 
                 {
                     Console.Clear();
-                    Console.WriteLine("Invalid input. Please try again.");
                     Start();
                 }
             }
@@ -60,8 +55,7 @@ namespace Tekst_RPG {
                 "\n                                                                           Type 'Start', to start hacking." +
                 "\n                                                                        Type 'Quit' to exit terminal anytime.");
                 Console.Write("\n                                                                                        ");
-                string inputmenu = Console.ReadLine();
-                string inputMenu = inputmenu.ToLower();
+                string inputMenu = Console.ReadLine().ToLower();
                 if (inputMenu == "start") {
                     SideSelect();
                 } else if (inputMenu == "quit")
@@ -70,7 +64,6 @@ namespace Tekst_RPG {
                 } else
                 {
                     Console.Clear();
-                    Console.WriteLine("Invalid input. Please try again.");
                     MainMenuScreen();
                 }
             }
@@ -83,8 +76,7 @@ namespace Tekst_RPG {
 
                 Console.WriteLine("\n\n\n<- Type \"Back\" to go back");
 
-                string inputselect = Console.ReadLine();
-                string inputSelect = inputselect.ToLower();
+                string inputSelect = Console.ReadLine().ToLower();
                 if (inputSelect == "mi6") 
                 {
                     Console.WriteLine("Now working for the MI6");
@@ -103,7 +95,6 @@ namespace Tekst_RPG {
                 } else 
                 {
                     Console.Clear();
-                    Console.WriteLine("Invalid input. Please try again.");
                     SideSelect();
                 }
             }
@@ -115,15 +106,18 @@ namespace Tekst_RPG {
                 Console.WriteLine("\n   ███╗   ███╗██╗ ██████╗ \r\n   ████╗ ████║██║██╔════╝ \r\n   ██╔████╔██║██║███████╗ \r\n   ██║╚██╔╝██║██║██╔═══██╗\r\n   ██║ ╚═╝ ██║██║╚██████╔╝\r\n   ╚═╝     ╚═╝╚═╝ ╚═════╝ \r\n                          ");
                 Console.ForegroundColor = ConsoleColor.Green;
 
-                /*if (isUnlocked = true) 
+                DissarmGame dissarmGame = new DissarmGame();
+                bool isUnlocked = false;
+
+                if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("1. Disarm Terroist Attack    - (type \"Disarm\" to hack)");
-                /*} else
+                } else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("1. Disarm Terroist Attack (type \"Disarm\" to hack");
-                }*/
+                }
 
 
                 /*if (isUnlocked = true) 
@@ -149,26 +143,24 @@ namespace Tekst_RPG {
 
                 Console.WriteLine("\n\n<- Type \"Back\" to go back");
 
-                string chosenterroistMission = Console.ReadLine();
-                string chosenTerroistMission = chosenterroistMission.ToLower();
-                if (chosenTerroistMission == "disarm") 
+                string chosenMi6Mission = Console.ReadLine().ToLower();
+                if (chosenMi6Mission == "disarm") 
                 {
-                    DissarmGame dissarmGame = new DissarmGame();
+                    Console.Clear();
                     dissarmGame.Play();
-                } else if (chosenTerroistMission == "dice")
+                } else if (chosenMi6Mission == "dice")
                 {
                     //Dice();
-                } else if (chosenTerroistMission == "fingerprint")
+                } else if (chosenMi6Mission == "fingerprint")
                 {
                     //Fingerprint();
-                } else if (chosenTerroistMission == "back")
+                } else if (chosenMi6Mission == "back")
                 {
                     SideSelect();
                 } else
                 {
                     Console.Clear();
-                    Console.WriteLine("Invalid input. Please try again.");
-                    TerroistMissions();
+                    Mi6Missions();
                 }
             }
 
@@ -213,8 +205,7 @@ namespace Tekst_RPG {
 
                 Console.WriteLine("\n\n<- Type \"Back\" to go back");
 
-                string chosenterroistMission = Console.ReadLine();
-                string chosenTerroistMission = chosenterroistMission.ToLower();
+                string chosenTerroistMission = Console.ReadLine().ToLower().ToLower();
                 if (chosenTerroistMission == "riddle") 
                 {
                     //Riddle();
@@ -230,10 +221,8 @@ namespace Tekst_RPG {
                 } else
                 {
                     Console.Clear();
-                    Console.WriteLine("Invalid input. Please try again.");
                     TerroistMissions();
                 }
             }
-        }
     }
 }

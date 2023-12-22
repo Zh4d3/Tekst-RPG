@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KspyvuTGCg+Nlbb3ZFFOguBdeyecojqd6laZH33ilBM+u+8tLPfvYuwRhAAj/wDR4v/j+HL9z+/diq9Iiudr6Q==",
+  "dgSpecHash": "SLqHlPfjcou+lc+w2A1suSuaNsdFYeZCd3vj451ttvVdh5ojMzwVQbhe9xaZWpuxM03ygbtJUeT8uEh6MUJ55A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nexus borger\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
+  "projectFilePath": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Nexus borger\\source\\repos\\Tekst-RPG\\Tekst-RPG\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -1,12 +1,10 @@
 ﻿using Tekst_RPG;
 
-/*Game game = new Game();
-game.Play();*/                      //game play
+Game game = new Game();
+game.Start();
 
-riddle Riddle = new riddle();
-Riddle.Play();
-/*Game game = new Game();
-game.Play();*/
+/*DissarmGame dissarmGame = new DissarmGame();
+dissarmGame.Play();*/
 
-DissarmGame dissarmGame = new DissarmGame();
-dissarmGame.Play();
+/*riddle Riddle = new riddle();
+Riddle.Play();*/
