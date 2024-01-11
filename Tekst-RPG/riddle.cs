@@ -13,6 +13,4 @@ namespace Tekst_RPG
             Console.WriteLine("Hej");
         }
     }
-
-
 }
