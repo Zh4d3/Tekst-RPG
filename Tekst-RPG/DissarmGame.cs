@@ -45,7 +45,7 @@ namespace Tekst_RPG
             {
                 Console.WriteLine("" +
                     "\n   ╔═══════════════════╦═══════════════╦═══╦═══╗" +
-                    "\n   ║                   ║               ║   ║   ║" +
+                    "\n   ║                   ║               ║   ║ X ║" +
                     "\n   ╚═══════════╣   ╦   ╩   ╔═══════════╝   ║   ║" +
                     "\n O                 ║       ║               ║   ║" +
                     "\n   ╔═══════╣   ╦   ╚═══════╬═══╣   ╠═══╗   ║   ║" +
@@ -57,7 +57,7 @@ namespace Tekst_RPG
                     "\n   ║   ║   ╔═══════╝   ╩   ║   ╦   ╠═══╗   ║   ║" +
                     "\n   ║   ║   ║               ║   ║       ║   ║   ║                 W" +
                     "\n   ╠═══╝   ║   ╔═══════╗   ║   ╠═══╗   ╚═══╝   ║         Left  A S D  Right         C" +
-                    "\n   ║       ║   ║       ║   ║   ║   ║           ║" +
+                    "\n   ║       ║   ║ X     ║   ║   ║   ║           ║" +
                     "\n   ║   ╦   ║   ╚═══╗   ╠═══╝   ╩   ╠═══════════║                Down" +
                     "\n   ║   ║   ║       ║   ║           ║           ║" +
                     "\n   ║   ║   ╚═══╣   ║   ║   ╔═══╦═══╝   ╔═══╣   ║" +
@@ -65,17 +65,17 @@ namespace Tekst_RPG
                     "\n   ║   ║   ╔═══════╣   ╩   ║   ╩   ╠═══╩═══════╣" +
                     "\n   ║   ║   ║       ║       ║                   ║" +
                     "\n   ║   ║   ╩   ╔═══╩═══╣   ╚═══╣   ╦   ╠═══════╣" +
-                    "\n   ║   ║       ║                   ║           ║" +
+                    "\n   ║   ║       ║                   ║         X ║" +
                     "\n   ╚═══╩═══════╩═══════════════════╩═══════════╝" +
                     "\n\nYou now need to navigate through the maze." +
                     "\nThis is possible by writing the right path." +
-                    "\nTo do this type (all after each other) the correct path, that also disarms every bomb. BE AWARE THAT YOU HAVE TO FIND THE FASTEST WAY" +
+                    "\nTo do this type (all after each other) the correct path, that also disarms every bomb. *BE AWARE THAT YOU HAVE TO FIND THE FASTEST PATH*" +
                     "\nDown below you can see the maze, in which the bombs are located, indicated by the letter \"B\" and your position is indicated by the letter \"O\"." +
                     "\nAn example is: WWDDCA, which moves forward twice, then twice to the right, followed up by disarming a bomb and finally moves to the left." +
                     "\nWhen you believe you have typed the correct path that disarms every bomb, hit enter.");
 
                 string guessedPath = Console.ReadLine().ToLower();
-                if (guessedPath == "dddsssdw" || guessedPath == "ddddsdd")
+                if (guessedPath == "dddsssassssddwawwddwwddwddssdwdwwwcsssasaaasssassawwwacdsssdsddwdsddc")
                 {
                     Console.WriteLine("You have successfully disarmed every bomb in the maze.");
                     gameIsCompleted = true;

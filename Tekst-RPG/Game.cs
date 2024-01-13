@@ -106,18 +106,18 @@ namespace Tekst_RPG
                 Console.WriteLine("\n   ███╗   ███╗██╗ ██████╗ \r\n   ████╗ ████║██║██╔════╝ \r\n   ██╔████╔██║██║███████╗ \r\n   ██║╚██╔╝██║██║██╔═══██╗\r\n   ██║ ╚═╝ ██║██║╚██████╔╝\r\n   ╚═╝     ╚═╝╚═╝ ╚═════╝ \r\n                          ");
                 Console.ForegroundColor = ConsoleColor.Green;
 
-                DissarmGame dissarmGame = new DissarmGame();
-                bool isUnlocked = false;
+                DissarmGame disarmGame = new DissarmGame();
+                //bool isDisarmUnlocked = disarmGame.Play();
 
-                if (isUnlocked = true) 
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("1. Disarm Terroist Attack    - (type \"Disarm\" to hack)");
-                } else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("1. Disarm Terroist Attack (type \"Disarm\" to hack");
-                }
+                //if (isDisarmUnlocked = true)
+                //{
+                    //Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("1. Disarm Terroist Attack    - (type \"Disarm\" to hack)");
+                //} else
+                //{
+                    //Console.ForegroundColor = ConsoleColor.Red;
+                    //Console.WriteLine("1. Disarm Terroist Attack (type \"Disarm\" to hack");
+                //}
 
 
                 /*if (isUnlocked = true) 
@@ -147,7 +147,7 @@ namespace Tekst_RPG
                 if (chosenMi6Mission == "disarm") 
                 {
                     Console.Clear();
-                    dissarmGame.Play();
+                    disarmGame.Play();
                 } else if (chosenMi6Mission == "dice")
                 {
                     //Dice();
@@ -170,6 +170,8 @@ namespace Tekst_RPG
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\n   ████████╗███████╗██████╗ ██████╗  ██████╗ ██╗███████╗████████╗\r\n   ╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗██║██╔════╝╚══██╔══╝\r\n      ██║   █████╗  ██████╔╝██████╔╝██║   ██║██║███████╗   ██║   \r\n      ██║   ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██║╚════██║   ██║   \r\n      ██║   ███████╗██║  ██║██║  ██║╚██████╔╝██║███████║   ██║   \r\n      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   \r\n                                                                 ");
                 Console.ForegroundColor = ConsoleColor.Green;
+
+                TerminalGame terminalGame = new TerminalGame();
 
                 /*if (isUnlocked = true) 
                 {
@@ -211,8 +213,9 @@ namespace Tekst_RPG
                     //Riddle();
                 } else if (chosenTerroistMission == "terminal")
                 {
-                    //Terminal();
-                } else if (chosenTerroistMission == "Key")
+                    Console.Clear();
+                    terminalGame.Play();
+            } else if (chosenTerroistMission == "Key")
                 {
                     //Key();
                 } else if (chosenTerroistMission == "back")
