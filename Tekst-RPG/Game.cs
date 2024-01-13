@@ -29,7 +29,7 @@ namespace Tekst_RPG
                 }
             }
 
-            static void MainMenuScreen() 
+            public void MainMenuScreen() 
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("" +
@@ -68,7 +68,7 @@ namespace Tekst_RPG
                 }
             }
 
-            static void SideSelect() 
+            public void SideSelect() 
             {
                 Console.Clear();
                 Console.WriteLine("Here you choose if you want to hack against the terroists (working as the MI6)\nOr if you want to work with the terroists (working against the MI6)\n");
@@ -99,7 +99,7 @@ namespace Tekst_RPG
                 }
             }
 
-            static void Mi6Missions() 
+            public void Mi6Missions() 
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -107,22 +107,21 @@ namespace Tekst_RPG
                 Console.ForegroundColor = ConsoleColor.Green;
 
                 DissarmGame disarmGame = new DissarmGame();
-                //bool isDisarmUnlocked = disarmGame.Play();
-
-                //if (isDisarmUnlocked = true)
-                //{
-                    //Console.ForegroundColor = ConsoleColor.Green;
+                /*bool isDisarmUnlocked = false;
+                if (isDisarmUnlocked = true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;*/
                     Console.WriteLine("1. Disarm Terroist Attack    - (type \"Disarm\" to hack)");
-                //} else
-                //{
-                    //Console.ForegroundColor = ConsoleColor.Red;
-                    //Console.WriteLine("1. Disarm Terroist Attack (type \"Disarm\" to hack");
-                //}
+                /*} else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("1. Disarm Terroist Attack (type \"Disarm\" to hack");
+                }*/
 
 
                 /*if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Blue;*/
                     Console.WriteLine("2. Dice                      - (type \"Dice\" to hack)");
                 /*} else
                 {
@@ -133,7 +132,7 @@ namespace Tekst_RPG
 
                 /*if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Blue;*/
                     Console.WriteLine("3. Fingerprint Blueprint     - (type \"Fingerprint\" to hack)");
                 /*} else
                 {
@@ -147,7 +146,7 @@ namespace Tekst_RPG
                 if (chosenMi6Mission == "disarm") 
                 {
                     Console.Clear();
-                    disarmGame.Play();
+                    /*isDisarmUnlocked = */disarmGame.Play();
                 } else if (chosenMi6Mission == "dice")
                 {
                     //Dice();
@@ -164,7 +163,7 @@ namespace Tekst_RPG
                 }
             }
 
-            static void TerroistMissions() 
+            public void TerroistMissions() 
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -175,7 +174,7 @@ namespace Tekst_RPG
 
                 /*if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Yellow;*/
                     Console.WriteLine("1. Riddle              - (type \"Riddle\" to hack)");
                 /*} else
                 {
@@ -186,7 +185,7 @@ namespace Tekst_RPG
 
                 /*if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Yellow;*/
                     Console.WriteLine("2. Terminal Hacking    - (type \"Terminal\" to hack)");
                 /*} else
                 {
@@ -197,7 +196,7 @@ namespace Tekst_RPG
 
                 /*if (isUnlocked = true) 
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;*/
+                    Console.ForegroundColor = ConsoleColor.Yellow;*/
                     Console.WriteLine("3. Key Blueprint       - (type \"Key\" to hack)");
                 /*} else
                 {

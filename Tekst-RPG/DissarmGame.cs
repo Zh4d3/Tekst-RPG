@@ -7,7 +7,7 @@ namespace Tekst_RPG
         public bool Play()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            bool gameIsCompleted = false;
+            bool isDisarmCompleted = false;
             Game game = new Game();
 
             void DissarmMessage()
@@ -28,7 +28,7 @@ namespace Tekst_RPG
                 else if (startSignal == "back")
                 {
                     Console.Clear();
-                    game.Start();
+                    game.Mi6Missions();
                 }
                 else if (startSignal == "quit")
                 {
@@ -44,7 +44,13 @@ namespace Tekst_RPG
             void MazeGame()
             {
                 Console.WriteLine("" +
-                    "\n   ╔═══════════════════╦═══════════════╦═══╦═══╗" +
+                    "\n\nYou now need to navigate through the maze." +
+                    "\nThis is possible by writing the right path." +
+                    "\nTo do this type (all after each other) the correct path, that also disarms every bomb. *BE AWARE THAT YOU HAVE TO FIND THE FASTEST PATH*" +
+                    "\nDown below you can see the maze, in which the bombs are located, indicated by the letter \"B\" and your position is indicated by the letter \"O\"." +
+                    "\nAn example is: WWDDCA, which moves forward twice, then twice to the right, followed up by disarming a bomb and finally moves to the left." +
+                    "\nWhen you believe you have typed the correct path that disarms every bomb, hit enter." +
+                    "\n\n   ╔═══════════════════╦═══════════════╦═══╦═══╗" +
                     "\n   ║                   ║               ║   ║ X ║" +
                     "\n   ╚═══════════╣   ╦   ╩   ╔═══════════╝   ║   ║" +
                     "\n O                 ║       ║               ║   ║" +
@@ -66,58 +72,49 @@ namespace Tekst_RPG
                     "\n   ║   ║   ║       ║       ║                   ║" +
                     "\n   ║   ║   ╩   ╔═══╩═══╣   ╚═══╣   ╦   ╠═══════╣" +
                     "\n   ║   ║       ║                   ║         X ║" +
-                    "\n   ╚═══╩═══════╩═══════════════════╩═══════════╝" +
-                    "\n\nYou now need to navigate through the maze." +
-                    "\nThis is possible by writing the right path." +
-                    "\nTo do this type (all after each other) the correct path, that also disarms every bomb. *BE AWARE THAT YOU HAVE TO FIND THE FASTEST PATH*" +
-                    "\nDown below you can see the maze, in which the bombs are located, indicated by the letter \"B\" and your position is indicated by the letter \"O\"." +
-                    "\nAn example is: WWDDCA, which moves forward twice, then twice to the right, followed up by disarming a bomb and finally moves to the left." +
-                    "\nWhen you believe you have typed the correct path that disarms every bomb, hit enter.");
+                    "\n   ╚═══╩═══════╩═══════════════════╩═══════════╝");
 
                 string guessedPath = Console.ReadLine().ToLower();
+
                 if (guessedPath == "dddsssassssddwawwddwwddwddssdwdwwwcsssasaaasssassawwwacdsssdsddwdsddc")
                 {
-                    Console.WriteLine("You have successfully disarmed every bomb in the maze.");
-                    gameIsCompleted = true;
+                    isDisarmCompleted = true;
                 }
                 else
                 {
-                    gameIsCompleted = false;
+                    isDisarmCompleted = false;
                 }
             }
 
             DissarmMessage();
 
-            if (gameIsCompleted)
+            if (isDisarmCompleted)
             {
-                Console.WriteLine("YIPII");
-                return true;
-                game.Start();
+                Console.WriteLine("Congratz. You have successfully disarmed every bomb in the maze.");
+                Thread.Sleep(2000);
+                Console.Clear();
+                game.Mi6Missions();
             }
             else
             {
-                Console.WriteLine("Sadly, that wasn't the correct path. Type \"Start\" to try again, or type \"Back\" to go back to the missions tab.");
+                Console.WriteLine("Sadly, you failed. Type \"Start\" to try again, or type \"Back\" to go back to the missions tab.");
                 string tryAgain;
                 tryAgain = Console.ReadLine().ToLower();
                 if (tryAgain == "start") {
-                    return false;
                     Console.Clear();
                     DissarmMessage();
                 } else if (tryAgain == "back") {
-                    return false;
                     Console.Clear();
-                    game.Start();
+                    game.Mi6Missions();
                 } else if (tryAgain == "quit") {
-                    return false;
                     Environment.Exit(0);
                 } else {
-                    return false;
                     Console.Clear();
                     DissarmMessage();
                 }
             }
 
-
+            return isDisarmCompleted;
         }
     }
 }
