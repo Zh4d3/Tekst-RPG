@@ -15,6 +15,23 @@ namespace Tekst_RPG {
             string entry = "";
             string likeness = "";
 
+
+            char randomFillChar1 = GetRandomFillChar();
+            char randomFillChar2 = GetRandomFillChar();
+
+            List<string> wrongWords1 = new List<string>() { "BONES", "TILES", "SLATE", "DAILY", "CLUBS", "SKULL", Convert.ToString(randomFillChar1), Convert.ToString(randomFillChar2) };
+            string correctWord1 = "SKIES";
+
+            List<string> wrongWords2 = new List<string>() { "TAKEN", "TREES", "WRITE", "GHOST", "SHINY", "SKIES", "RAISE", "WAVES" };
+            string correctWord2 = "WAKES";
+
+            List<string> wrongWords3 = new List<string>() { "GREED", "NOISE", "BOOTS", "SCENE", "CLUBS", "CHEAP", "CHEAT", Convert.ToString(randomFillChar1) };
+            string correctWord3 = "BOOST";
+
+            List<string> wordList = GetRandomWordList();
+
+            string correctWord = "1";//GetRandomWordList();
+
             string display1 = $"\n\n0xADD0 {GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}BONES{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()} 0xAE90 {GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}" +
             $"\n0xADDC {GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}TILES{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()} 0xAE9C {GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}" +
             $"\n0xADE8 {GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()} 0xAEA8 SLATE{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}{GetRandomFillChar()}" +
@@ -43,7 +60,6 @@ namespace Tekst_RPG {
                 string attemptsRemaining = new string('o', i);
                 Display(wrongWord, entry, likeness, attemptsRemaining, display1, display2, display3, display4, display5);
 
-                string correctWord = "SKIES";
                 string input = Console.ReadLine().ToUpper();
 
                 int Likeness = DetermineLikeness(input, correctWord);
@@ -65,7 +81,7 @@ namespace Tekst_RPG {
                 wrongWord = ">" + input;
                 entry = ">Entry denied.";
                 likeness = ">Likeness=" + Likeness;
-            }
+            };
 
             Console.WriteLine("Sadly, you failed. Type \"Start\" to try again, or type \"Back\" to go back to the missions tab.");
             string tryAgain;
@@ -101,6 +117,26 @@ namespace Tekst_RPG {
 
             int randomFillCharPicker = random.Next(fillChar.Length);
             return fillChar[randomFillCharPicker];
+        }
+
+        List<string> GetRandomWordList()
+        {
+            char randomFillChar1 = GetRandomFillChar();
+            char randomFillChar2 = GetRandomFillChar();
+
+            List<string> wrongWords1 = new List<string>() { "BONES", "TILES", "SLATE", "DAILY", "CLUBS", "SKULL", Convert.ToString(randomFillChar1), Convert.ToString(randomFillChar2) };
+            string correctWord1 = "SKIES";
+
+            List<string> wrongWords2 = new List<string>() { "TAKEN", "TREES", "WRITE", "GHOST", "SHINY", "SKIES", "RAISE", "WAVES" };
+            string correctWord2 = "WAKES";
+
+            List<string> wrongWords3 = new List<string>() { "GREED", "NOISE", "BOOTS", "SCENE", "CLUBS", "CHEAP", "CHEAT", Convert.ToString(randomFillChar1) };
+            string correctWord3 = "BOOST";
+
+            List<string> wordsList = new List<string>() { };
+
+
+            return wordsList;
         }
 
         static int DetermineLikeness(string input, string correctWord)
