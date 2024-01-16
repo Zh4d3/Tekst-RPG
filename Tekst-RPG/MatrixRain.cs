@@ -1,4 +1,4 @@
-﻿//Alt dette er kopieret herfra: https://www.youtube.com/watch?v=eWceJNkxbdU&ab_channel=CollegeCode
+﻿//Alt dette er kopieret herfra: https://www.youtube.com/watch?v=eWceJNkxbdU&ab_channel=CollegeCode, og bruges kun for "visuals" i introen.
 
 using System;
 using System.Collections.Generic;

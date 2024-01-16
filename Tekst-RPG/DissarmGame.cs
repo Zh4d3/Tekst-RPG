@@ -4,12 +4,14 @@ namespace Tekst_RPG
 {
     internal class DissarmGame
     {
+        //Lucas: Dette var det første spil vi lavede og vi eksperimenterede dermed med hvordan vi kunne få farven i "Game" klassen til at skifte. Dermed lavede vi metoden til en bool, med variablen "isDisarmCompleted" som skulle bruges til at vurdere farven på teksten i "Game" klassen.
         public bool Play()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             bool isDisarmCompleted = false;
             Game game = new Game();
 
+            //Lucas: Metode til at udskrive introduktionen.
             void DissarmMessage()
             {
                 Console.WriteLine("Welcome to MI6" +
@@ -19,6 +21,7 @@ namespace Tekst_RPG
                     "\n\nWe need your help to hack through the maze and disarm the bombs before it is too late.");
 
                 Console.Write("\nType \"Start\" if you are ready to hack and start the timer. Else type \"Back\": ");
+                //Lucas: Læser inputet og kører metoden "MazeGame" hvis man skriver "start".
                 string startSignal = Console.ReadLine().ToLower();
                 if (startSignal == "start")
                 {
@@ -43,6 +46,7 @@ namespace Tekst_RPG
 
             void MazeGame()
             {
+                //Lucas: Udskriver selve spillet og dets tekst.
                 Console.WriteLine("" +
                     "\n\nYou now need to navigate through the maze." +
                     "\nThis is possible by writing the right path." +
@@ -74,6 +78,7 @@ namespace Tekst_RPG
                     "\n   ║   ║       ║                   ║         X ║" +
                     "\n   ╚═══╩═══════╩═══════════════════╩═══════════╝");
 
+                //Lucas: Tjekker om man har skrevet denne korrekte vej. Hvis man har sættet variablen "isDisarmCompleted" til "true". Ellers har man ike vundet og den sættes til "false".
                 string guessedPath = Console.ReadLine().ToLower();
 
                 if (guessedPath == "dddsssassssddwawwddwwddwddssdwdwwwcsssasaaasssassawwwacdsssdsddwdsddc")
@@ -86,8 +91,10 @@ namespace Tekst_RPG
                 }
             }
 
+            
             DissarmMessage();
 
+            //Lucas: Hvis spillet er vundet skrives tillykke. Derefter går der 2 sekunder før man sendes tilbage til missions-menuen i "Game" klassen. Hvis man ikke vandt læses der om man har skrevet "start" for at prøve igen.
             if (isDisarmCompleted)
             {
                 Console.WriteLine("Congratz. You have successfully disarmed every bomb in the maze.");

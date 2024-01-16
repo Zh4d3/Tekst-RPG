@@ -10,12 +10,15 @@ namespace Tekst_RPG
     {
             public void Start() 
             {
+                //Lucas: Startskærm der spørger om du vil starte spillet eller skippe introen.
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("Go to fullscreen and type \"Start\" to continue, or type \"Skip\" to skip the intro: ");
+                //Lucas: Læser inputtet og laver det til "lower" for at undgå fejl med Upper/Lower case i svar. Dette gennemgår gennem resten af spillet.
                 string inputStart = Console.ReadLine().ToLower();
                 if (inputStart == "start") 
                 {
                     Console.Clear();
+                    //Lucas: Kører introen som består af "MatrixRain". Denne er taget fra internettet som linket inde i klassen. Introen virker åbenbart ikke til alle resolutions, så hvis ikke den virker, skriv "skip" i stedet.
                     MatrixRain matrixRain = new MatrixRain();
                     matrixRain.Run();
                     Console.Clear();
@@ -36,6 +39,7 @@ namespace Tekst_RPG
 
             public void MainMenuScreen() 
             {
+                //Lucas: Printer Start-menuen, som består af teksten samt kraniet.
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("" +
                 "\n                                                                                    HACKMASTER\n\n" +
@@ -60,6 +64,7 @@ namespace Tekst_RPG
                 "\n                                                                           Type 'Start', to start hacking." +
                 "\n                                                                        Type 'Quit' to exit terminal anytime.");
                 Console.Write("\n                                                                                        ");
+                //Lucas: Læser igen inputtet og kører "SideSelect" metoden hvis man skriver "start".
                 string inputMenu = Console.ReadLine().ToLower();
                 if (inputMenu == "start") {
                     SideSelect();
@@ -75,12 +80,14 @@ namespace Tekst_RPG
 
             public void SideSelect() 
             {
+                //Lucas: Printer SideSelect-menuen, hvor den spørger hvem man vil hacke for. 
                 Console.Clear();
                 Console.WriteLine("Here you choose if you want to hack against the terroists (working as the MI6)\nOr if you want to work with the terroists (working against the MI6)\n");
                 Console.Write("Type \"MI6\", or \"Terroist\" corresponding with whoever you want to work WITH: ");
 
                 Console.WriteLine("\n\n\n<- Type \"Back\" to go back");
 
+                //Lucas: Læser igen inputtet og kører henholdsvist "Mi6Missions" eller "TerroistMissions" metoden alt efter hvad man skriver.
                 string inputSelect = Console.ReadLine().ToLower();
                 if (inputSelect == "mi6") 
                 {
@@ -106,13 +113,14 @@ namespace Tekst_RPG
 
             public void Mi6Missions() 
             {
+                //Lucas: Skriver i farven blå "MI6".
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\n   ███╗   ███╗██╗ ██████╗ \r\n   ████╗ ████║██║██╔════╝ \r\n   ██╔████╔██║██║███████╗ \r\n   ██║╚██╔╝██║██║██╔═══██╗\r\n   ██║ ╚═╝ ██║██║╚██████╔╝\r\n   ╚═╝     ╚═╝╚═╝ ╚═════╝ \r\n                          ");
                 Console.ForegroundColor = ConsoleColor.Green;
-
+                
+                //Lucas: Denne del blev ikke helt færdig. Det var her meningen at tekstens farve skulle skifte alt efter om banen var blevet klaret eller ej. Nedenfor ses hvordan vi tænkte det skulle virke.
                 DissarmGame disarmGame = new DissarmGame();
-                FingerPrintGame fingerPrintGame = new FingerPrintGame();
                 /*bool isDisarmUnlocked = false;
                 if (isDisarmUnlocked = true)
                 {
@@ -148,6 +156,7 @@ namespace Tekst_RPG
 
                 Console.WriteLine("\n\n<- Type \"Back\" to go back");
 
+                //Lucas: Læser input og starter det valgte spil.
                 string chosenMi6Mission = Console.ReadLine().ToLower();
                 if (chosenMi6Mission == "disarm") 
                 {
@@ -159,7 +168,7 @@ namespace Tekst_RPG
                 } else if (chosenMi6Mission == "fingerprint")
                 {
                 Console.Clear();
-                    /*isDisarmUnlocked = */fingerPrintGame.Play();
+                    //Fingerprint();
                 } else if (chosenMi6Mission == "back")
                 {
                     SideSelect();
@@ -172,12 +181,15 @@ namespace Tekst_RPG
 
             public void TerroistMissions() 
             {
+                //Lucas: Skriver i farven blå "TERROIST".
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\n   ████████╗███████╗██████╗ ██████╗  ██████╗ ██╗███████╗████████╗\r\n   ╚══██╔══╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗██║██╔════╝╚══██╔══╝\r\n      ██║   █████╗  ██████╔╝██████╔╝██║   ██║██║███████╗   ██║   \r\n      ██║   ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██║╚════██║   ██║   \r\n      ██║   ███████╗██║  ██║██║  ██║╚██████╔╝██║███████║   ██║   \r\n      ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   \r\n                                                                 ");
                 Console.ForegroundColor = ConsoleColor.Green;
-
+                
+                //Lucas: Igen var meningen her at tekstens farve skiftede farve.
                 TerminalGame terminalGame = new TerminalGame();
+                RiddleGame riddleGame = new RiddleGame();
 
                 /*if (isUnlocked = true) 
                 {
@@ -213,15 +225,17 @@ namespace Tekst_RPG
 
                 Console.WriteLine("\n\n<- Type \"Back\" to go back");
 
+                //Lucas: Læser input og starter det valgte spil.
                 string chosenTerroistMission = Console.ReadLine().ToLower().ToLower();
                 if (chosenTerroistMission == "riddle") 
                 {
-                    //Riddle();
+                    Console.Clear();
+                    riddleGame.Play();
                 } else if (chosenTerroistMission == "terminal")
                 {
                     Console.Clear();
                     terminalGame.Play();
-            } else if (chosenTerroistMission == "Key")
+                } else if (chosenTerroistMission == "Key")
                 {
                     //Key();
                 } else if (chosenTerroistMission == "back")
