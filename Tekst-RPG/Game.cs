@@ -4,19 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tekst_RPG 
+namespace Tekst_RPG
 {
     internal class Game 
     {
             public void Start() 
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("Go to fullscreen and type \"Start\" to continue: ");
+                Console.Write("Go to fullscreen and type \"Start\" to continue, or type \"Skip\" to skip the intro: ");
                 string inputStart = Console.ReadLine().ToLower();
-                if (inputStart == "start") {
+                if (inputStart == "start") 
+                {
                     Console.Clear();
-                    /*MatrixRain matrixRain = new MatrixRain();          //BENYT HVIS VI BRUGER MatrixRain.
-                    matrixRain.Run();*/
+                    MatrixRain matrixRain = new MatrixRain();
+                    matrixRain.Run();
+                    Console.Clear();
+                    MainMenuScreen();
+                } else if (inputStart == "skip") 
+                {
                     Console.Clear();
                     MainMenuScreen();
                 } else if (inputStart == "quit")
@@ -107,6 +112,7 @@ namespace Tekst_RPG
                 Console.ForegroundColor = ConsoleColor.Green;
 
                 DissarmGame disarmGame = new DissarmGame();
+                FingerPrintGame fingerPrintGame = new FingerPrintGame();
                 /*bool isDisarmUnlocked = false;
                 if (isDisarmUnlocked = true)
                 {
@@ -152,7 +158,8 @@ namespace Tekst_RPG
                     //Dice();
                 } else if (chosenMi6Mission == "fingerprint")
                 {
-                    //Fingerprint();
+                Console.Clear();
+                    /*isDisarmUnlocked = */fingerPrintGame.Play();
                 } else if (chosenMi6Mission == "back")
                 {
                     SideSelect();
