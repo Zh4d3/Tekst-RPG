@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rauns\\.nuget\\packages\\": {}
+    "C:\\Users\\Nexus borger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
+      "projectUniqueName": "C:\\Users\\Nexus borger\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
       "projectName": "Tekst-RPG",
-      "projectPath": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
-      "packagesPath": "C:\\Users\\rauns\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rauns\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG\\obj\\",
+      "projectPath": "C:\\Users\\Nexus borger\\source\\repos\\Tekst-RPG\\Tekst-RPG\\Tekst-RPG.csproj",
+      "packagesPath": "C:\\Users\\Nexus borger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nexus borger\\source\\repos\\Tekst-RPG\\Tekst-RPG\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rauns\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nexus borger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tekst_RPG {
-    internal class TerminalGame 
+namespace Tekst_RPG 
+{
+    internal class TerminalGame : MiniGame
     {
         public void Play() 
         {
@@ -18,7 +19,6 @@ namespace Tekst_RPG {
 
             List<string> wordsList = GetRandomWordList(out string correctWord, out List<string> wrongWordList);
 
-            //Lucas: Nu laves en liste der hedder "lines" som skal indeholde 8 tilfældige ord fra den nyligt valgte "wordList". Når et ord er valgt og indsat i "lines" slettes den.
             List<List<string>> lines = new List<List<string>>();
 
             for (int i = 0; i < 32; i++) 

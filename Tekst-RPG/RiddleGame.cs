@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace Tekst_RPG {
-    internal class RiddleGame {
+    internal class RiddleGame : MiniGame
+    {
         protected int score;
 
         public virtual void Play() {
